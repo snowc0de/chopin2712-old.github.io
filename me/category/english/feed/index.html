@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>English &#8211; Chopin &#8211; Dev</title>
+	<atom:link href="http://localhost/me/category/english/feed/" rel="self" type="application/rss+xml" />
+	<link>http://localhost/me</link>
+	<description>My world</description>
+	<lastBuildDate>Mon, 08 Jul 2019 19:27:52 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.2.2</generator>
+	<item>
+		<title>Install any app in one command on Ubuntu (Linux)</title>
+		<link>http://localhost/me/2019/07/08/install-any-app-in-one-command-on-ubuntu-linux/</link>
+				<pubDate>Mon, 08 Jul 2019 18:47:09 +0000</pubDate>
+		<dc:creator><![CDATA[Chopin Dev]]></dc:creator>
+				<category><![CDATA[English]]></category>
+
+		<guid isPermaLink="false">http://localhost/?p=44</guid>
+				<description><![CDATA[Imagine being on your favorite Linux distro with 10 different installers to run with 3 commands for each. That is not a good experience of course but I will explain you how to install all deb, AppImages, sh, Flatpak and some exes in only one command. I called it AIP it&#8217;s Open Source (of course) [&#8230;]]]></description>
+								<content:encoded><![CDATA[
+<p>Imagine being on your favorite Linux distro with 10 different installers to run with 3 commands for each. That is not a good experience of course but I will explain you how to install all deb, AppImages, sh, Flatpak and some exes in only one command.</p>
+
+
+
+<p>I called it <strong>AIP</strong> it&#8217;s Open Source (of course) and you can install it with the following commands:</p>
+
+
+
+<pre class="wp-block-code"><code>git clone https://github.com/chopin2712/Auto-Installer-process
+cd Auto-Installer-process
+sudo sh setup.sh</code></pre>
+
+
+
+<p>Once you installed it you can go in the directory who contain the installer and open it in terminal.</p>
+
+
+
+<p>Then run the following command:</p>
+
+
+
+<pre class="wp-block-code"><code>sudo aip</code></pre>
+
+
+
+<p>Then your file will be installed and then removed (except for the .jar and .AppImage files formats who are exceptions because if you remove them you remove the software&#8230;)</p>
+
+
+
+<h2> Don&#8217;t have installer(s)? </h2>
+
+
+
+<p>If you know the package name but you don&#8217;t have the installer, there is another thing you can do with AIP. </p>
+
+
+
+<p>Just run the following command:</p>
+
+
+
+<pre class="wp-block-code"><code>sudo aipn</code></pre>
+
+
+
+<p>Then type the package name</p>
+
+
+
+<p>Once you see in the terminal the app is installed, stop the script by pressing <strong>CTRL + D</strong> to prevent the conflicts.</p>
+
+
+
+<p>Then your app will be installed if your package name is valid.</p>
+
+
+
+<h2> Want to uninstall?</h2>
+
+
+
+<p>There is no functions to uninstall the apps, but you can do it using <strong>Synaptic </strong>by running the following command:</p>
+
+
+
+<pre class="wp-block-code"><code>sudo synaptic</code></pre>
+
+
+
+<p>Then you can search your package, check the box and choose <em>complete removal.</em></p>
+
+
+
+<p>Click on <strong>Apply</strong> and then <strong>Confirm</strong> to uninstall the package(s).</p>
+
+
+
+<h2> Want to contribute?</h2>
+
+
+
+<p>You can get the source code on GitHub on the following link:</p>
+
+
+
+<p> <a href="https://github.com/chopin2712/Auto-Installer-Process">https://github.com/chopin2712/Auto-Installer-Process</a></p>
+
+
+
+<h2> Don&#8217;t works properly?</h2>
+
+
+
+<p>You can post an issue on the GitHub project to get support or make a feature request. Thanks for using this app.</p>
+]]></content:encoded>
+										</item>
+		<item>
+		<title>Create a Minecraft Server never been so easy on Linux</title>
+		<link>http://localhost/me/2019/07/08/create-a-minecraft-server-never-been-so-easy-on-linux/</link>
+				<pubDate>Mon, 08 Jul 2019 15:49:10 +0000</pubDate>
+		<dc:creator><![CDATA[Chopin Dev]]></dc:creator>
+				<category><![CDATA[English]]></category>
+
+		<guid isPermaLink="false">http://localhost/?p=22</guid>
+				<description><![CDATA[Hi! This is my real first post on this website. I will explain you how to use my latest creation. It is called MineCraft Server Setup (MCSS) and is an MC simple server installer. Only linux (for the moment) It&#8217;s made with Python and it&#8217;s Open Source. You can browse the source on this link. [&#8230;]]]></description>
+								<content:encoded><![CDATA[
+<p>Hi! This is my real first post on this website. I will explain you how to use my latest creation. It is called MineCraft Server Setup (MCSS) and is an MC simple server installer. <em>Only linux (for the moment</em>)</p>
+
+
+
+<p>It&#8217;s made with Python and it&#8217;s Open Source. You can browse the source <a href="https://github.com/chopin2712/MCSS">on this link</a>. I am very proud of this! It supports Vanilla, CraftBukkit and Spigot at the moment. This is a little tutorial to explain you how to create your very own MC server.</p>
+
+
+
+<p>First run the following commands:</p>
+
+
+
+<pre class="wp-block-code"><code>git clone https://github.com/chopin2712/MCSS
+cd MCSS
+chmod +x install.sh
+sudo sh install.sh</code></pre>
+
+
+
+<p>Then create a new directory on your computer and open it in terminal&#8230;</p>
+
+
+
+<p>The real magic happen here, you have just to run:</p>
+
+
+
+<pre class="wp-block-code"><code>sudo MCSS</code></pre>
+
+
+
+<p>First answer 1 for Vanilla or 2 for craftbukkit/spigot.</p>
+
+
+
+<p>Second, download the server.jar file on https://mcversions.net , put it in the directory then press enter. </p>
+
+
+
+<p>Third, if you want to change the basics settings of Minecraft answer &#8220;Y&#8221; and modify your settings (TIPS: For online mode change into false to accept cracked versions)</p>
+
+
+
+<p>For the &#8220;world wide step&#8221;, I recommend you to answer &#8220;N&#8221; to skip this part for the moment because this feature is not stable enough to be used successfully&#8230;</p>
+
+
+
+<p>Finally your server will start, just wait 20 seconds and you can follow the above IP addresses to  join your world.</p>
+
+
+
+<p>You can write &#8220;stop&#8221; to shut down your Minecraft Server and you can run &#8220;op USERNAME&#8221; to be admin on your server and run all the admins commands on it directly on Minecraft.</p>
+
+
+
+<p>It is very simple to use in deed and my future ideas for this app are:</p>
+
+
+
+<ul><li>Making the world wide feature works perfectly</li><li>Making available cross-platform</li><li>Possibly trying to make a visual GUI to use the app (far in the future)</li><li>Etc, etc</li></ul>
+
+
+
+<p>You can contribute and access to this project by clicking on the following link:</p>
+
+
+
+<p><a href="https://github.com/chopin2712/MCSS">https://github.com/chopin2712/MCSS</a></p>
+
+
+
+<p>Already installed? You can update your version to a higher one by running the following script:</p>
+
+
+
+<pre class="wp-block-code"><code>git clone https://github.com/chopin2712/MCSS
+cd MCSS
+sudo sh install.sh
+cd ..
+sudo rm -r MCSS</code></pre>
+
+
+
+<p> <em>NB: If you made  a server in  a older version, the update don&#8217;t have any effect and your server will works properly&#8230; </em></p>
+
+
+
+<p>Thanks for your attention and hope you will try this app soon.</p>
+]]></content:encoded>
+										</item>
+	</channel>
+</rss>
