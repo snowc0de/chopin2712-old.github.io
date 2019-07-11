@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Tutorials &#8211; Chopin &#8211; Dev</title>
+	<atom:link href="http://localhost/me/category/tutorials/feed/" rel="self" type="application/rss+xml" />
+	<link>http://localhost/me</link>
+	<description>My world</description>
+	<lastBuildDate>Thu, 11 Jul 2019 13:22:56 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.2.2</generator>
+	<item>
+		<title>How to make a static website using WordPress</title>
+		<link>http://localhost/me/2019/07/11/how-to-make-a-static-website-using-wordpress/</link>
+				<pubDate>Thu, 11 Jul 2019 12:20:31 +0000</pubDate>
+		<dc:creator><![CDATA[Chopin Dev]]></dc:creator>
+				<category><![CDATA[English]]></category>
+		<category><![CDATA[Tutorials]]></category>
+		<category><![CDATA[Uncategorized]]></category>
+
+		<guid isPermaLink="false">http://localhost/me/?p=92</guid>
+				<description><![CDATA[You think your website too complex for what it is, that it&#8217;s too slow, too expensive and too insecure? Then this post is made for you! Introduction Map on WordPress Wix and others. If I tell you: website, you may think WordPress, Wix or Blogger&#8230; But if you have a blog or a simple informative [&#8230;]]]></description>
+								<content:encoded><![CDATA[
+<p>You think your website too complex for what it is, that it&#8217;s too slow, too expensive and too insecure?</p>
+
+
+
+<p>Then this post is made for you!</p>
+
+
+
+<h2>Introduction</h2>
+
+
+
+<p>Map on WordPress Wix and others.</p>
+
+
+
+<p>If I tell you: website, you may think WordPress, Wix or Blogger&#8230;</p>
+
+
+
+<figure class="wp-block-image"><img src="http://localhost/me/wp-content/uploads/2019/07/slide1-1024x576.png" alt="" class="wp-image-94" srcset="http://localhost/me/wp-content/uploads/2019/07/slide1-1024x576.png 1024w, http://localhost/me/wp-content/uploads/2019/07/slide1-300x169.png 300w, http://localhost/me/wp-content/uploads/2019/07/slide1-768x432.png 768w, http://localhost/me/wp-content/uploads/2019/07/slide1.png 1058w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p>But if you have a blog or a simple informative site you don&#8217;t need such powerful tools with so many features to load on it!</p>
+
+
+
+<p>You can simply use a static site….</p>
+
+
+
+<figure class="wp-block-image"><img src="http://localhost/me/wp-content/uploads/2019/07/slide2-1024x576.png" alt="" class="wp-image-95" srcset="http://localhost/me/wp-content/uploads/2019/07/slide2-1024x576.png 1024w, http://localhost/me/wp-content/uploads/2019/07/slide2-300x169.png 300w, http://localhost/me/wp-content/uploads/2019/07/slide2-768x432.png 768w, http://localhost/me/wp-content/uploads/2019/07/slide2.png 1058w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p>A static site is roughly speaking a site using only HTML and CSS files. </p>
+
+
+
+<p>To create one you can do it, either by writing yourself the HTML code or by using a generator like Jekyll….</p>
+
+
+
+<p>But if you really want simplicity, you can use WordPress too!</p>
+
+
+
+<p>I will explain you how to create a static WordPress Website locally for free, how to convert it into static website and then uploading it on GitHub Pages.</p>
+
+
+
+<h2>How it works?</h2>
+
+
+
+<figure class="wp-block-image"><img src="http://localhost/me/wp-content/uploads/2019/07/slide4-1-1024x576.png" alt="" class="wp-image-99" srcset="http://localhost/me/wp-content/uploads/2019/07/slide4-1-1024x576.png 1024w, http://localhost/me/wp-content/uploads/2019/07/slide4-1-300x169.png 300w, http://localhost/me/wp-content/uploads/2019/07/slide4-1-768x432.png 768w, http://localhost/me/wp-content/uploads/2019/07/slide4-1.png 1058w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p>To make this we will use WordPress to create a local website and then convert it into HTML files.</p>
+
+
+
+<p>For this we will use: Wget, XAMPP, WordPress, A theme, Git, GitHub Pages&#8230;</p>
+
+
+
+<figure class="wp-block-image"><img src="http://localhost/me/wp-content/uploads/2019/07/slide5-1-1024x576.png" alt="" class="wp-image-100" srcset="http://localhost/me/wp-content/uploads/2019/07/slide5-1-1024x576.png 1024w, http://localhost/me/wp-content/uploads/2019/07/slide5-1-300x169.png 300w, http://localhost/me/wp-content/uploads/2019/07/slide5-1-768x432.png 768w, http://localhost/me/wp-content/uploads/2019/07/slide5-1.png 1058w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p>I will not explain how to install Wget and Git here but this is the install command on Ubuntu:</p>
+
+
+
+<pre class="wp-block-code"><code>sudo apt install wget git</code></pre>
+
+
+
+<p>But you can find easily how to install them on your Operating System.</p>
+
+
+
+<h2> Setup XAMPP</h2>
+
+
+
+<figure class="wp-block-image"><img src="http://localhost/me/wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-05-57-1024x576.png" alt="" class="wp-image-102" srcset="http://localhost/me/wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-05-57-1024x576.png 1024w, http://localhost/me/wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-05-57-300x169.png 300w, http://localhost/me/wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-05-57-768x432.png 768w, http://localhost/me/wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-05-57.png 1600w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption>XAMPP website</figcaption></figure>
+
+
+
+<p>First, go on <a href="https://www.apachefriends.org/download.html">this link</a> and download the file on your computer in new directory named &#8220;wordpress&#8221;.</p>
+
+
+
+<p>If you are on Linux you can use AIP to install the file or just run the following commands:</p>
+
+
+
+<pre class="wp-block-code"><code>chmod +x *.AppImage
+sudo ./*.AppImage</code></pre>
+
+
+
+<p>Then click all the time on &#8220;next&#8221; to proceed to the installation&#8230;</p>
+
+
+
+<h2> XAMPP Configuration</h2>
+
+
+
+<figure class="wp-block-embed-wordpress wp-block-embed is-type-wp-embed is-provider-wordpress-org"><div class="wp-block-embed__wrapper">
+<blockquote class="wp-embedded-content" data-secret="qokY51r5pl"><a href="https://wordpress.org/download/">Download</a></blockquote><iframe title="&#8220;Download&#8221; &#8212; WordPress.org" class="wp-embedded-content" sandbox="allow-scripts" security="restricted" style="position: absolute; clip: rect(1px, 1px, 1px, 1px);" src="https://wordpress.org/download/embed/#?secret=qokY51r5pl" data-secret="qokY51r5pl" width="600" height="338" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+</div><figcaption>WordPress.org website</figcaption></figure>
+
+
+
+<p>Once the XAMPP installation finished, click on &#8220;finish&#8221; to start XAMPP, then switch tab to Manage Servers and start Apache and MySql Database&#8230;</p>
+
+
+
+<p>Then you will need to have a primary access to files. On Linux just run the following commands:</p>
+
+
+
+<pre class="wp-block-code"><code>cd /opt/lampp/htdocs
+sudo chmod 777 -R .
+sudo chmod 775 phpmyadmin/config.inc.php</code></pre>
+
+
+
+<p>Now you have downloaded the WordPress archive place it in your &#8220;wordpress&#8221; directory and extract his content. <br>Then go in /opt/lampp/htdocs in a new window. Copy the archive files into htdocs and replace &#8220;index.php&#8221;.</p>
+
+
+
+<p>Now you can test you XAMPP setup by going to the following link:</p>
+
+
+
+<p><a href="http://localhost">http://localhost</a></p>
+
+
+
+<p>If you see something like this, it works:</p>
+
+
+
+<figure class="wp-block-image"><img src="http://localhost/me/wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-19-57-1024x576.png" alt="" class="wp-image-105" srcset="http://localhost/me/wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-19-57-1024x576.png 1024w, http://localhost/me/wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-19-57-300x169.png 300w, http://localhost/me/wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-19-57-768x432.png 768w, http://localhost/me/wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-19-57.png 1600w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption>Successful XAMPP installation</figcaption></figure>
+
+
+
+<h2>MYSQL Configuration</h2>
+
+
+
+<p>Then go on the <a href="http://localhost/phpmyadmin">PhpMyAdmin Pannel</a> and click on new, write the following settings:</p>
+
+
+
+<figure class="wp-block-image"><img src="http://localhost/me/wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-23-10-1024x576.png" alt="" class="wp-image-106" srcset="http://localhost/me/wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-23-10-1024x576.png 1024w, http://localhost/me/wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-23-10-300x169.png 300w, http://localhost/me/wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-23-10-768x432.png 768w, http://localhost/me/wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-23-10.png 1600w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption>wordpress | utf8mb4_general_ci</figcaption></figure>
+
+
+
+<p>Then click on create. </p>
+
+
+
+<p>We just created a local database, now we need to create a user to use it.</p>
+
+
+
+<p>Click on &#8220;localhost&#8221; then click on Users then New</p>
+
+
+
+<figure class="wp-block-image"><img src="http://localhost/me/wp-content/uploads/2019/07/cropped.png" alt="" class="wp-image-114" srcset="http://localhost/me/wp-content/uploads/2019/07/cropped.png 396w, http://localhost/me/wp-content/uploads/2019/07/cropped-297x300.png 297w, http://localhost/me/wp-content/uploads/2019/07/cropped-70x70.png 70w, http://localhost/me/wp-content/uploads/2019/07/cropped-127x127.png 127w, http://localhost/me/wp-content/uploads/2019/07/cropped-125x125.png 125w" sizes="(max-width: 396px) 100vw, 396px" /><figcaption>Password = &#8220;password&#8221;</figcaption></figure>
+
+
+
+<p>Finally tick the box &#8220;Check all&#8221; and lick on &#8220;go&#8221;.</p>
+
+
+
+<h2>WordPress Setup</h2>
+
+
+
+<p>Now, come back on <a href="http://localhost">http://localhost</a>, click on &#8220;next&#8221;check your information  and click again on next.</p>
+
+
+
+<p>Now you can fill your personal information, there are mine:</p>
+
+
+
+<figure class="wp-block-image"><img src="http://localhost/me/wp-content/uploads/2019/07/Screenshot-from-2019-07-10-19-10-02-1024x576.png" alt="" class="wp-image-116" srcset="http://localhost/me/wp-content/uploads/2019/07/Screenshot-from-2019-07-10-19-10-02-1024x576.png 1024w, http://localhost/me/wp-content/uploads/2019/07/Screenshot-from-2019-07-10-19-10-02-300x169.png 300w, http://localhost/me/wp-content/uploads/2019/07/Screenshot-from-2019-07-10-19-10-02-768x432.png 768w, http://localhost/me/wp-content/uploads/2019/07/Screenshot-from-2019-07-10-19-10-02.png 1600w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p>Once you finished click on &#8220;Start WordPress&#8221;&#8230;</p>
+
+
+
+<h2>WordPress Configuration</h2>
+
+
+
+<p>Then you can login with your information and be on you dashboard.</p>
+
+
+
+<p>Next, go in <em>wp-config.php</em> and add the following line to it:</p>
+
+
+
+<pre class="wp-block-code"><code>define( 'FS_METHOD', 'direct' ); </code></pre>
+
+
+
+<p>Then press CTRL + S and run the following command:</p>
+
+
+
+<pre class="wp-block-code"><code>sudo chmod 777 -R .</code></pre>
+
+
+
+<p>Next go on your dashboard, click on Apparance, add new, upload theme and drag-and-drop your theme on it.</p>
+
+
+
+<p>Then click on &#8220;activate&#8221;.</p>
+
+
+
+<p>Finally go to customize and change the things you want to customize from the base theme.</p>
+
+
+
+<p>Then create some pages and posts by clicking on &#8220;+&#8221;</p>
+
+
+
+<figure class="wp-block-image"><img src="http://localhost/me/wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-53-28-1024x576.png" alt="" class="wp-image-119" srcset="http://localhost/me/wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-53-28-1024x576.png 1024w, http://localhost/me/wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-53-28-300x169.png 300w, http://localhost/me/wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-53-28-768x432.png 768w, http://localhost/me/wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-53-28.png 1600w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p>Once you finished to write, un-tick the &#8220;allow comments&#8221; section if it is activated and change the different settings on this side&#8230;</p>
+
+
+
+<figure class="wp-block-image"><img src="http://localhost/me/wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-54-55-1024x576.png" alt="" class="wp-image-121" srcset="http://localhost/me/wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-54-55-1024x576.png 1024w, http://localhost/me/wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-54-55-300x169.png 300w, http://localhost/me/wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-54-55-768x432.png 768w, http://localhost/me/wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-54-55.png 1600w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption>See &#8220;Allow Comments&#8221; on the side right</figcaption></figure>
+
+
+
+<p>Once you completely finished this first version of your website we will need to convert it into static website&#8230;</p>
+
+
+
+<h2>Converting into static website using Wget</h2>
+
+
+
+<p>To convert your website into a static website copy-paste the following comand:</p>
+
+
+
+<pre class="wp-block-code"><code>wget --mirror --convert-links --adjust-extension --page-requisites --no-parent http://localhost</code></pre>
+
+
+
+<p>Now you can go to the &#8220;localhost&#8221; directory and test your static website by going to &#8220;index.html&#8221;.</p>
+
+
+
+<p>Now we will upload it on GitHub Pages but you can skip this part and upload it on your FTP server if you have one&#8230;</p>
+
+
+
+<h2>Upload to GitHub Pages</h2>
+
+
+
+<p>To upload it we will use the GitHub Pages system. To make this create a new repository and name it as <strong>YOURUSERNAME</strong>.github.io</p>
+
+
+
+<p>Then open &#8220;localhost&#8221; as terminal and start the following commands:</p>
+
+
+
+<pre class="wp-block-code"><code>git init
+git remote add origin https://github.com/USERNAME/USERNAME.github.io
+git add –all
+git commit -m “website”
+git push -u origin master</code></pre>
+
+
+
+<p>Then you can connect your terminal with your GitHub account. Wait some minutes to be uploaded and changed.</p>
+
+
+
+<h2>Demo</h2>
+
+
+
+<p>To test if your website has been uploaded just go to the following URL:</p>
+
+
+
+<p><strong>YOURUSERNAME</strong>.github.io</p>
+
+
+
+<p>If all&#8217;s right you should see your website there!</p>
+
+
+
+<h2>Linux Tip</h2>
+
+
+
+<p>Little Linux exclusive tip: this is a little script to reduce the number of commands to run to update your website</p>
+
+
+
+<p>Just copy-paste the following code in a file named install.sh:</p>
+
+
+
+<pre class="wp-block-code"><code>sudo echo "cd ~/PATH/TO/wordpress" > /usr/bin/wp-start
+sudo echo "sudo /opt/lampp/lampp start" >> /usr/bin/wp-start
+sudo echo "echo Go to http://localhost/wp-admin to access to your website..." >> /usr/bin/wp-start
+sudo chmod 777 /usr/bin/wp-start
+
+sudo echo "cd ~/PATH/TO/wordpress" > /usr/bin/wp-stop
+sudo echo "wget --mirror --convert-links --adjust-extension --page-requisites --no-parent http://localhost" >> /usr/bin/wp-stop
+sudo echo "cd localhost" >> /usr/bin/wp-stop
+sudo echo "git add --all" >> /usr/bin/wp-stop
+sudo echo "git commit -m "website"" >> /usr/bin/wp-stop
+sudo echo "git push -u origin master" >> /usr/bin/wp-stop
+sudo echo "sudo /opt/lampp/lampp stop" >> /usr/bin/wp-stop
+sudo chmod 777 /usr/bin/wp-stop</code></pre>
+
+
+
+<p>Then replace the following values: </p>
+
+
+
+<ul><li>PATH/TO is the path to the folder &#8220;wordpress&#8221; who contain the localhost directory&#8230;</li></ul>
+
+
+
+<p>If you want you can replace the &#8220;git&#8221; commands by the FTP uploads commands.</p>
+
+
+
+<p>To install this file start the following command:</p>
+
+
+
+<pre class="wp-block-code"><code>sudo chmod +x install.sh &amp;&amp; sudo sh install.sh</code></pre>
+
+
+
+<p>Starting this point when you want to update your website just start: &#8220;wp-start&#8221;, make your modifications and when you finished run &#8220;wp-stop&#8221;</p>
+
+
+
+<p>This script will manage the starting process of XAMPP, the Upload and the stop of XAMPP in only 2 commands.</p>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>So now you know how to create a static website using WordPress, installing WordPress locally, using Wget, uploading to GitHub Pages and create an automation script of the update! </p>
+
+
+
+<p>Thanks for your attention!</p>
+
+
+
+<p>See you later</p>
+]]></content:encoded>
+										</item>
+	</channel>
+</rss>

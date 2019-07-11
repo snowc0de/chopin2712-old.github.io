@@ -1,0 +1,665 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>How to make a static website using WordPress &#8211; Chopin &#8211; Dev</title>
+<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://s.w.org/' />
+<link rel="alternate" type="application/rss+xml" title="Chopin - Dev &raquo; Feed" href="feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Chopin - Dev &raquo; Comments Feed" href="comments/feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="Chopin - Dev &raquo; How to make a static website using WordPress Comments Feed" href="2019/07/11/how-to-make-a-static-website-using-wordpress/feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/localhost\/me\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.2"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='wp-includes/css/dist/block-library/style.min.css%3Fver=5.2.2.css' type='text/css' media='all' />
+<link rel='stylesheet' id='illdy-pace-css'  href='wp-content/themes/illdy/layout/css/pace.min.css%3Fver=5.2.2.css' type='text/css' media='all' />
+<link rel='stylesheet' id='illdy-google-fonts-css'  href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900,700,300,300italic|Lato:300,400,700,900|Poppins:300,400,500,600,700' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css'  href='wp-content/themes/illdy/layout/css/bootstrap.min.css%3Fver=3.3.6.css' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-theme-css'  href='wp-content/themes/illdy/layout/css/bootstrap-theme.min.css%3Fver=3.3.6.css' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='wp-content/themes/illdy/layout/css/font-awesome.min.css%3Fver=4.5.0.css' type='text/css' media='all' />
+<link rel='stylesheet' id='owl-carousel-css'  href='wp-content/themes/illdy/layout/css/owl-carousel.min.css%3Fver=2.0.0.css' type='text/css' media='all' />
+<link rel='stylesheet' id='illdy-main-css'  href='wp-content/themes/illdy/layout/css/main.css%3Fver=5.2.2.css' type='text/css' media='all' />
+<style id='illdy-main-inline-css' type='text/css'>
+
+				#header .top-header .header-logo:hover,
+				#header .top-header .header-navigation ul li.menu-item-has-children .sub-menu li:hover > a,
+				#latest-news .section-content .post .post-title:hover,
+				#latest-news .section-content .post .post-button,
+				#contact-us .section-content .contact-us-box .box-left,
+				.recentcomments > a,
+				#blog .blog-post .blog-post-title:hover,
+				#blog .blog-post .blog-post-meta .post-meta-author,
+				#blog .blog-post .blog-post-meta .post-meta-author .fa,
+				#blog .blog-post .blog-post-meta .post-meta-time .fa,
+				#blog .blog-post .blog-post-meta .post-meta-categories .fa,
+				#blog .blog-post .blog-post-meta .post-meta-comments .fa,
+				#blog .blog-post .blog-post-author h4,
+				.widget table td#prev a,
+				.widget table td#next a,
+				.widget .widget-recent-post .recent-post-button,
+				span.rss-date:before,
+				.post-date:before,
+				.blog-post-related-articles .related-post:hover .related-post-title,
+				#comments #comments-list ul.comments .comment .url,
+				#comments #comments-list ul.comments .comment .comment-reply-link,
+				#header .bottom-header span.span-dot,
+				#header .top-header .header-navigation ul li:hover a,
+				input[type=submit] { color: #0a0002; }
+				#header .top-header .header-navigation ul li.menu-item-has-children .sub-menu li:hover > a { border-color: #0a0002; }
+				#header .bottom-header .header-button-two,
+				#comments #respond .comment-form #input-submit,
+				#latest-news .latest-news-button,
+				#contact-us .section-content .wpcf7-form p .wpcf7-submit,
+				#blog .blog-post .blog-post-button,
+				.widget table caption,
+				.widget table#wp-calendar tbody tr td a { background-color: #0a0002; }
+				@media only screen and (max-width: 992px) { .header-front-page nav ul.sub-menu { background-color: #0a0002; } }
+				a:hover,
+				a:focus,
+				#latest-news .section-content .post .post-button:hover,
+				#latest-news .section-content .post .post-button:focus,
+				.recentcomments a:hover,
+				.widget:not(.widget_rss):not(.widget_recent_comments):not(.widget_recent_entries) ul li:hover:before,
+				.widget:not(.widget_recent_comments) ul li:hover > a,
+				.widget.widget_recent_comments ul li a:hover,
+				.widget table td#prev a:hover:before,
+				.widget table td#next a:hover:before,
+				.widget table td#prev a:focus:before,
+				.widget table td#next a:focus:before,
+				.widget_categories ul li:hover,
+				.widget_archive ul li:hover { color: #7c7c7c; }
+				#testimonials .section-content .testimonials-carousel .carousel-testimonial .testimonial-content,
+				.widget table#wp-calendar tbody tr td a:hover,
+				#comments #respond .comment-form #input-submit:hover,
+				input[type=submit]:hover,
+				#latest-news .latest-news-button:hover,
+				#contact-us .section-content .wpcf7-form p .wpcf7-submit:hover,
+				#header .bottom-header .header-button-two:hover,
+				#blog .blog-post .blog-post-button:hover { background-color: #7c7c7c; }
+				#testimonials .section-content .testimonials-carousel .carousel-testimonial .testimonial-content:after  { border-color: #7c7c7c transparent transparent transparent; }
+				input:focus,
+				input:hover,
+				textarea:focus,
+				textarea:hover { border-color: #7c7c7c; }
+				.front-page-section .section-header .section-description,
+				#header .top-header .header-navigation ul li.menu-item-has-children .sub-menu li a,
+				#services .section-content .service .service-entry,
+				#latest-news .section-content .post .post-entry,
+				#team .section-content .person .person-content p,
+				#contact-us .section-content .contact-us-box .box-right span,
+				#contact-us .section-content .contact-us-box .box-right span a,
+				#contact-us .section-content .contact-us-social a,
+				#contact-us .section-content .wpcf7-form p .wpcf7-text,
+				#footer .copyright,
+				#footer .copyright a,
+				.widget table tbody,
+				input,
+				textarea,
+				.markup-format h1, 
+				.markup-format h2, 
+				.markup-format h3, 
+				.markup-format h4, 
+				.markup-format h5, 
+				.markup-format h6,
+				body { color: #8c9597; }
+				#contact-us .section-content .wpcf7-form p .wpcf7-text::-webkit-input-placeholder,
+				#contact-us .section-content .wpcf7-form p .wpcf7-text::-moz-placeholder,
+				#contact-us .section-content .wpcf7-form p .wpcf7-text:-ms-input-placeholder,
+				#contact-us .section-content .wpcf7-form p .wpcf7-text:-moz-placeholder,
+				#contact-us .section-content .wpcf7-form p .wpcf7-textarea,
+				#contact-us .section-content .wpcf7-form p .wpcf7-textarea::-webkit-input-placeholder,
+				#contact-us .section-content .wpcf7-form p .wpcf7-textarea::-moz-placeholder,
+				#contact-us .section-content .wpcf7-form p .wpcf7-textarea:-ms-input-placeholder,
+				#contact-us .section-content .wpcf7-form p .wpcf7-textarea:-moz-placeholder{ color: #8c9597; }
+				.front-page-section .section-header h3,
+				#latest-news .section-content .post .post-button:active,
+				#blog .blog-post .blog-post-title,
+				.widget table thead th,
+				#team .section-content .person .person-content h6,
+				.widget_rss cite,
+				.illdy_home_parallax h3 { color: #545454; }
+			
+</style>
+<link rel='stylesheet' id='illdy-custom-css'  href='wp-content/themes/illdy/layout/css/custom.min.css%3Fver=5.2.2.css' type='text/css' media='all' />
+<link rel='stylesheet' id='illdy-style-css'  href='wp-content/themes/illdy/style.css%3Fver=1.0.16.css' type='text/css' media='all' />
+<script type='text/javascript' src='wp-includes/js/jquery/jquery.js%3Fver=1.12.4-wp'></script>
+<script type='text/javascript' src='wp-includes/js/jquery/jquery-migrate.min.js%3Fver=1.4.1'></script>
+<script type='text/javascript' src='wp-content/themes/illdy/layout/js/pace/pace.min.js%3Fver=5.2.2'></script>
+<link rel='https://api.w.org/' href='wp-json/index.html' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc.php%3Frsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Comment faire un site statique' href='index.html%3Fp=61.html' />
+<meta name="generator" content="WordPress 5.2.2" />
+<link rel="canonical" href="index.html%3Fp=92.html" />
+<link rel='shortlink' href='index.html%3Fp=92.html' />
+<link rel="alternate" type="application/json+oembed" href="wp-json/oembed/1.0/embed%3Furl=http:%252F%252Flocalhost%252Fme%252F2019%252F07%252F11%252Fhow-to-make-a-static-website-using-wordpress%252F" />
+<link rel="alternate" type="text/xml+oembed" href="wp-json/oembed/1.0/embed%3Furl=http:%252F%252Flocalhost%252Fme%252F2019%252F07%252F11%252Fhow-to-make-a-static-website-using-wordpress%252F&amp;format=xml" />
+<style type="text/css">.pace .pace-progress {background-color: #878787; color: #878787;}.pace .pace-activity {box-shadow: inset 0 0 0 2px #878787, inset 0 0 0 7px #ffffff;}.pace-overlay {background-color: #141414;}</style>
+        <style type="text/css" id="illdy-about-section-css">#header.header-front-page {background-image: url(wp-content/themes/illdy/layout/images/front-page/front-page-header.jpg) !important;}</style>
+        <style type="text/css" id="illdy-latestnews-section-css"></style>
+        <style type="text/css" id="illdy-fullwidth-section-css"></style>
+        <style type="text/css" id="illdy-about-section-css"></style>
+        <style type="text/css" id="illdy-projects-section-css">#projects {background-image: url(wp-content/themes/illdy/layout/images/front-page/pattern.png) !important;}#projects {background-size: auto !important;}#projects {background-repeat: repeat !important;}</style>
+        <style type="text/css" id="illdy-services-section-css"></style>
+        <style type="text/css" id="illdy-team-section-css">#team {background-image: url(wp-content/themes/illdy/layout/images/front-page/pattern.png) !important;}#team {background-size: auto !important;}#team {background-repeat: repeat !important;}</style>
+        <style type="text/css" id="illdy-testimonials-section-css">#testimonials {background-image: url(wp-content/themes/illdy/layout/images/testiomnials-background.jpg) !important;}</style>
+
+    </head>
+<body class="post-template-default single single-post postid-92 single-format-standard">
+	<div class="pace-overlay"></div>
+<header id="header" class="header-blog" style="background-image: url(wp-content/uploads/2019/07/cropped-956886d3439c207b142345f15fa03cd4.jpg);background-attachment: fixed;">
+	<div class="top-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4 col-xs-8">
+
+																		<a href="../me.html" title="Chopin - Dev" class="header-logo">Chopin - Dev</a>
+											
+				</div><!--/.col-sm-2-->
+				<div class="col-sm-8 col-xs-4">
+					<nav class="header-navigation">
+					<ul id="menu-main" class="clearfix"><li id="menu-item-75" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75"><a href="../index.html">HOME</a></li>
+<li id="menu-item-76" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-76"><a href="../me.html">My Blog</a></li>
+<li id="menu-item-82" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82"><a href="script.html">Video Scripts</a></li>
+<li id="menu-item-84" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-84"><a href="https://github.com/chopin2712">My GitHub</a></li>
+</ul>					</nav>
+					<button class="open-responsive-menu"><i class="fa fa-bars"></i></button>
+				</div><!--/.col-sm-10-->
+			</div><!--/.row-->
+		</div><!--/.container-->
+	</div><!--/.top-header-->
+	<nav class="responsive-menu">
+		<ul>
+			<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-75"><a href="../index.html">HOME</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-76"><a href="../me.html">My Blog</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-82"><a href="script.html">Video Scripts</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-84"><a href="https://github.com/chopin2712">My GitHub</a></li>
+		</ul>
+	</nav><!--/.responsive-menu-->
+	<div class="bottom-header blog">
+	<div class="container">
+		<div class="row">
+							<div class="col-sm-12">
+					<h1>How to make a static website using WordPress</h1>				</div><!--/.col-sm-12-->
+					</div><!--/.row-->
+	</div><!--/.container-->
+</div><!--/.bottom-header.blog--></header><!--/#header-->	<div class="container">
+	<div class="row">
+				<div class="col-sm-8">
+			
+				<section id="blog">
+					<article id="post-92" class="blog-post post-92 post type-post status-publish format-standard has-post-thumbnail hentry category-english category-tutorials category-uncategorized">
+	
+	<div class="blog-post-meta"><span class="post-meta-author"><i class="fa fa-user"></i>Chopin Dev</span><span class="post-meta-time"><i class="fa fa-calendar"></i><time datetime="2019-07-11">July 11, 2019</time></span><span class="post-meta-categories"><i class="fa fa-folder-o" aria-hidden="true"></i><a href="category/english/index.html" rel="category tag">English</a>, <a href="category/tutorials/index.html" rel="category tag">Tutorials</a>, <a href="category/uncategorized/index.html" rel="category tag">Uncategorized</a></span><span class="post-meta-comments"><i class="fa fa-comment-o"></i>Comments are off for this post</span></div><!--/.blog-post-meta-->	<div class="blog-post-entry markup-format">
+		
+<p>You think your website too complex for what it is, that it&#8217;s too slow, too expensive and too insecure?</p>
+
+
+
+<p>Then this post is made for you!</p>
+
+
+
+<h2>Introduction</h2>
+
+
+
+<p>Map on WordPress Wix and others.</p>
+
+
+
+<p>If I tell you: website, you may think WordPress, Wix or Blogger&#8230;</p>
+
+
+
+<figure class="wp-block-image"><img src="wp-content/uploads/2019/07/slide1-1024x576.png" alt="" class="wp-image-94" srcset="wp-content/uploads/2019/07/slide1-1024x576.png 1024w, wp-content/uploads/2019/07/slide1-300x169.png 300w, wp-content/uploads/2019/07/slide1-768x432.png 768w, wp-content/uploads/2019/07/slide1.png 1058w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p>But if you have a blog or a simple informative site you don&#8217;t need such powerful tools with so many features to load on it!</p>
+
+
+
+<p>You can simply use a static site….</p>
+
+
+
+<figure class="wp-block-image"><img src="wp-content/uploads/2019/07/slide2-1024x576.png" alt="" class="wp-image-95" srcset="wp-content/uploads/2019/07/slide2-1024x576.png 1024w, wp-content/uploads/2019/07/slide2-300x169.png 300w, wp-content/uploads/2019/07/slide2-768x432.png 768w, wp-content/uploads/2019/07/slide2.png 1058w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p>A static site is roughly speaking a site using only HTML and CSS files. </p>
+
+
+
+<p>To create one you can do it, either by writing yourself the HTML code or by using a generator like Jekyll….</p>
+
+
+
+<p>But if you really want simplicity, you can use WordPress too!</p>
+
+
+
+<p>I will explain you how to create a static WordPress Website locally for free, how to convert it into static website and then uploading it on GitHub Pages.</p>
+
+
+
+<h2>How it works?</h2>
+
+
+
+<figure class="wp-block-image"><img src="wp-content/uploads/2019/07/slide4-1-1024x576.png" alt="" class="wp-image-99" srcset="wp-content/uploads/2019/07/slide4-1-1024x576.png 1024w, wp-content/uploads/2019/07/slide4-1-300x169.png 300w, wp-content/uploads/2019/07/slide4-1-768x432.png 768w, wp-content/uploads/2019/07/slide4-1.png 1058w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p>To make this we will use WordPress to create a local website and then convert it into HTML files.</p>
+
+
+
+<p>For this we will use: Wget, XAMPP, WordPress, A theme, Git, GitHub Pages&#8230;</p>
+
+
+
+<figure class="wp-block-image"><img src="wp-content/uploads/2019/07/slide5-1-1024x576.png" alt="" class="wp-image-100" srcset="wp-content/uploads/2019/07/slide5-1-1024x576.png 1024w, wp-content/uploads/2019/07/slide5-1-300x169.png 300w, wp-content/uploads/2019/07/slide5-1-768x432.png 768w, wp-content/uploads/2019/07/slide5-1.png 1058w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p>I will not explain how to install Wget and Git here but this is the install command on Ubuntu:</p>
+
+
+
+<pre class="wp-block-code"><code>sudo apt install wget git</code></pre>
+
+
+
+<p>But you can find easily how to install them on your Operating System.</p>
+
+
+
+<h2> Setup XAMPP</h2>
+
+
+
+<figure class="wp-block-image"><img src="wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-05-57-1024x576.png" alt="" class="wp-image-102" srcset="wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-05-57-1024x576.png 1024w, wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-05-57-300x169.png 300w, wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-05-57-768x432.png 768w, wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-05-57.png 1600w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption>XAMPP website</figcaption></figure>
+
+
+
+<p>First, go on <a href="https://www.apachefriends.org/download.html">this link</a> and download the file on your computer in new directory named &#8220;wordpress&#8221;.</p>
+
+
+
+<p>If you are on Linux you can use AIP to install the file or just run the following commands:</p>
+
+
+
+<pre class="wp-block-code"><code>chmod +x *.AppImage
+sudo ./*.AppImage</code></pre>
+
+
+
+<p>Then click all the time on &#8220;next&#8221; to proceed to the installation&#8230;</p>
+
+
+
+<h2> XAMPP Configuration</h2>
+
+
+
+<figure class="wp-block-embed-wordpress wp-block-embed is-type-wp-embed is-provider-wordpress-org"><div class="wp-block-embed__wrapper">
+<blockquote class="wp-embedded-content" data-secret="qokY51r5pl"><a href="https://wordpress.org/download/">Download</a></blockquote><iframe title="&#8220;Download&#8221; &#8212; WordPress.org" class="wp-embedded-content" sandbox="allow-scripts" security="restricted" style="position: absolute; clip: rect(1px, 1px, 1px, 1px);" src="https://wordpress.org/download/embed/#?secret=qokY51r5pl" data-secret="qokY51r5pl" width="600" height="338" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+</div><figcaption>WordPress.org website</figcaption></figure>
+
+
+
+<p>Once the XAMPP installation finished, click on &#8220;finish&#8221; to start XAMPP, then switch tab to Manage Servers and start Apache and MySql Database&#8230;</p>
+
+
+
+<p>Then you will need to have a primary access to files. On Linux just run the following commands:</p>
+
+
+
+<pre class="wp-block-code"><code>cd /opt/lampp/htdocs
+sudo chmod 777 -R .
+sudo chmod 775 phpmyadmin/config.inc.php</code></pre>
+
+
+
+<p>Now you have downloaded the WordPress archive place it in your &#8220;wordpress&#8221; directory and extract his content. <br>Then go in /opt/lampp/htdocs in a new window. Copy the archive files into htdocs and replace &#8220;index.php&#8221;.</p>
+
+
+
+<p>Now you can test you XAMPP setup by going to the following link:</p>
+
+
+
+<p><a href="../index.html">http://localhost</a></p>
+
+
+
+<p>If you see something like this, it works:</p>
+
+
+
+<figure class="wp-block-image"><img src="wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-19-57-1024x576.png" alt="" class="wp-image-105" srcset="wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-19-57-1024x576.png 1024w, wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-19-57-300x169.png 300w, wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-19-57-768x432.png 768w, wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-19-57.png 1600w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption>Successful XAMPP installation</figcaption></figure>
+
+
+
+<h2>MYSQL Configuration</h2>
+
+
+
+<p>Then go on the <a href="../phpmyadmin.html">PhpMyAdmin Pannel</a> and click on new, write the following settings:</p>
+
+
+
+<figure class="wp-block-image"><img src="wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-23-10-1024x576.png" alt="" class="wp-image-106" srcset="wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-23-10-1024x576.png 1024w, wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-23-10-300x169.png 300w, wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-23-10-768x432.png 768w, wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-23-10.png 1600w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption>wordpress | utf8mb4_general_ci</figcaption></figure>
+
+
+
+<p>Then click on create. </p>
+
+
+
+<p>We just created a local database, now we need to create a user to use it.</p>
+
+
+
+<p>Click on &#8220;localhost&#8221; then click on Users then New</p>
+
+
+
+<figure class="wp-block-image"><img src="wp-content/uploads/2019/07/cropped.png" alt="" class="wp-image-114" srcset="wp-content/uploads/2019/07/cropped.png 396w, wp-content/uploads/2019/07/cropped-297x300.png 297w, wp-content/uploads/2019/07/cropped-70x70.png 70w, wp-content/uploads/2019/07/cropped-127x127.png 127w, wp-content/uploads/2019/07/cropped-125x125.png 125w" sizes="(max-width: 396px) 100vw, 396px" /><figcaption>Password = &#8220;password&#8221;</figcaption></figure>
+
+
+
+<p>Finally tick the box &#8220;Check all&#8221; and lick on &#8220;go&#8221;.</p>
+
+
+
+<h2>WordPress Setup</h2>
+
+
+
+<p>Now, come back on <a href="../index.html">http://localhost</a>, click on &#8220;next&#8221;check your information  and click again on next.</p>
+
+
+
+<p>Now you can fill your personal information, there are mine:</p>
+
+
+
+<figure class="wp-block-image"><img src="wp-content/uploads/2019/07/Screenshot-from-2019-07-10-19-10-02-1024x576.png" alt="" class="wp-image-116" srcset="wp-content/uploads/2019/07/Screenshot-from-2019-07-10-19-10-02-1024x576.png 1024w, wp-content/uploads/2019/07/Screenshot-from-2019-07-10-19-10-02-300x169.png 300w, wp-content/uploads/2019/07/Screenshot-from-2019-07-10-19-10-02-768x432.png 768w, wp-content/uploads/2019/07/Screenshot-from-2019-07-10-19-10-02.png 1600w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p>Once you finished click on &#8220;Start WordPress&#8221;&#8230;</p>
+
+
+
+<h2>WordPress Configuration</h2>
+
+
+
+<p>Then you can login with your information and be on you dashboard.</p>
+
+
+
+<p>Next, go in <em>wp-config.php</em> and add the following line to it:</p>
+
+
+
+<pre class="wp-block-code"><code>define( 'FS_METHOD', 'direct' ); </code></pre>
+
+
+
+<p>Then press CTRL + S and run the following command:</p>
+
+
+
+<pre class="wp-block-code"><code>sudo chmod 777 -R .</code></pre>
+
+
+
+<p>Next go on your dashboard, click on Apparance, add new, upload theme and drag-and-drop your theme on it.</p>
+
+
+
+<p>Then click on &#8220;activate&#8221;.</p>
+
+
+
+<p>Finally go to customize and change the things you want to customize from the base theme.</p>
+
+
+
+<p>Then create some pages and posts by clicking on &#8220;+&#8221;</p>
+
+
+
+<figure class="wp-block-image"><img src="wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-53-28-1024x576.png" alt="" class="wp-image-119" srcset="wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-53-28-1024x576.png 1024w, wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-53-28-300x169.png 300w, wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-53-28-768x432.png 768w, wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-53-28.png 1600w" sizes="(max-width: 1024px) 100vw, 1024px" /></figure>
+
+
+
+<p>Once you finished to write, un-tick the &#8220;allow comments&#8221; section if it is activated and change the different settings on this side&#8230;</p>
+
+
+
+<figure class="wp-block-image"><img src="wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-54-55-1024x576.png" alt="" class="wp-image-121" srcset="wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-54-55-1024x576.png 1024w, wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-54-55-300x169.png 300w, wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-54-55-768x432.png 768w, wp-content/uploads/2019/07/Screenshot-from-2019-07-11-14-54-55.png 1600w" sizes="(max-width: 1024px) 100vw, 1024px" /><figcaption>See &#8220;Allow Comments&#8221; on the side right</figcaption></figure>
+
+
+
+<p>Once you completely finished this first version of your website we will need to convert it into static website&#8230;</p>
+
+
+
+<h2>Converting into static website using Wget</h2>
+
+
+
+<p>To convert your website into a static website copy-paste the following comand:</p>
+
+
+
+<pre class="wp-block-code"><code>wget --mirror --convert-links --adjust-extension --page-requisites --no-parent http://localhost</code></pre>
+
+
+
+<p>Now you can go to the &#8220;localhost&#8221; directory and test your static website by going to &#8220;index.html&#8221;.</p>
+
+
+
+<p>Now we will upload it on GitHub Pages but you can skip this part and upload it on your FTP server if you have one&#8230;</p>
+
+
+
+<h2>Upload to GitHub Pages</h2>
+
+
+
+<p>To upload it we will use the GitHub Pages system. To make this create a new repository and name it as <strong>YOURUSERNAME</strong>.github.io</p>
+
+
+
+<p>Then open &#8220;localhost&#8221; as terminal and start the following commands:</p>
+
+
+
+<pre class="wp-block-code"><code>git init
+git remote add origin https://github.com/USERNAME/USERNAME.github.io
+git add –all
+git commit -m “website”
+git push -u origin master</code></pre>
+
+
+
+<p>Then you can connect your terminal with your GitHub account. Wait some minutes to be uploaded and changed.</p>
+
+
+
+<h2>Demo</h2>
+
+
+
+<p>To test if your website has been uploaded just go to the following URL:</p>
+
+
+
+<p><strong>YOURUSERNAME</strong>.github.io</p>
+
+
+
+<p>If all&#8217;s right you should see your website there!</p>
+
+
+
+<h2>Linux Tip</h2>
+
+
+
+<p>Little Linux exclusive tip: this is a little script to reduce the number of commands to run to update your website</p>
+
+
+
+<p>Just copy-paste the following code in a file named install.sh:</p>
+
+
+
+<pre class="wp-block-code"><code>sudo echo "cd ~/PATH/TO/wordpress" > /usr/bin/wp-start
+sudo echo "sudo /opt/lampp/lampp start" >> /usr/bin/wp-start
+sudo echo "echo Go to http://localhost/wp-admin to access to your website..." >> /usr/bin/wp-start
+sudo chmod 777 /usr/bin/wp-start
+
+sudo echo "cd ~/PATH/TO/wordpress" > /usr/bin/wp-stop
+sudo echo "wget --mirror --convert-links --adjust-extension --page-requisites --no-parent http://localhost" >> /usr/bin/wp-stop
+sudo echo "cd localhost" >> /usr/bin/wp-stop
+sudo echo "git add --all" >> /usr/bin/wp-stop
+sudo echo "git commit -m "website"" >> /usr/bin/wp-stop
+sudo echo "git push -u origin master" >> /usr/bin/wp-stop
+sudo echo "sudo /opt/lampp/lampp stop" >> /usr/bin/wp-stop
+sudo chmod 777 /usr/bin/wp-stop</code></pre>
+
+
+
+<p>Then replace the following values: </p>
+
+
+
+<ul><li>PATH/TO is the path to the folder &#8220;wordpress&#8221; who contain the localhost directory&#8230;</li></ul>
+
+
+
+<p>If you want you can replace the &#8220;git&#8221; commands by the FTP uploads commands.</p>
+
+
+
+<p>To install this file start the following command:</p>
+
+
+
+<pre class="wp-block-code"><code>sudo chmod +x install.sh &amp;&amp; sudo sh install.sh</code></pre>
+
+
+
+<p>Starting this point when you want to update your website just start: &#8220;wp-start&#8221;, make your modifications and when you finished run &#8220;wp-stop&#8221;</p>
+
+
+
+<p>This script will manage the starting process of XAMPP, the Upload and the stop of XAMPP in only 2 commands.</p>
+
+
+
+<h2>Conclusion</h2>
+
+
+
+<p>So now you know how to create a static website using WordPress, installing WordPress locally, using Wget, uploading to GitHub Pages and create an automation script of the update! </p>
+
+
+
+<p>Thanks for your attention!</p>
+
+
+
+<p>See you later</p>
+	</div><!--/.blog-post-entry.markup-format-->
+	<div class="blog-post-author clearfix"><img alt='' src='http://2.gravatar.com/avatar/ecd72c7d54a4ec16286cc39732c8473b?s=98&#038;d=mm&#038;r=g' srcset='http://2.gravatar.com/avatar/ecd72c7d54a4ec16286cc39732c8473b?s=196&#038;d=mm&#038;r=g 2x' class='avatar avatar-98 photo' height='98' width='98' /><h4>Chopin Dev</h4></div><!--/.blog-post-author.clearfix-->	</article><!--/#post-92.blog-post-->				</section><!--/#blog-->
+			</div><!--/.col-sm-7-->
+
+							<div class="col-sm-4">
+					<div id="sidebar">
+						<div id="search-2" class="widget widget_search"><form role="search" method="get" class="search-form" action="../me.html">
+    <div class="search-form-box">
+    	<input type="submit" id="searchsubmit" value="" />
+        <input type="search" id="s" placeholder="Search..." value="" name="s" title="Search for:" />
+    </div><!--/.search-form-box-->
+</form><!--/.search-form--></div>		<div id="recent-posts-2" class="widget widget_recent_entries">		<div class="widget-title"><h5>Recent Posts</h5></div>		<ul>
+											<li>
+					<a href="index.html%3Fp=92.html">How to make a static website using WordPress</a>
+									</li>
+											<li>
+					<a href="index.html%3Fp=61.html">Comment faire un site statique</a>
+									</li>
+											<li>
+					<a href="index.html%3Fp=44.html">Install any app in one command on Ubuntu (Linux)</a>
+									</li>
+											<li>
+					<a href="index.html%3Fp=22.html">Create a Minecraft Server never been so easy on Linux</a>
+									</li>
+					</ul>
+		</div>					</div>
+				</div>
+					</div><!--/.row-->
+	</div><!--/.container-->
+<footer id="footer">
+	<div class="container">
+		<div class="row">
+						<div class="col-md-3 col-sm-6 col-xs-12">
+							</div><!--/.col-sm-3-->
+			<div class="col-md-3 col-sm-6 col-xs-12">
+							</div><!--/.col-sm-3-->
+			<div class="col-md-3 col-sm-6 col-xs-12">
+							</div><!--/.col-sm-3-->
+			<div class="col-md-3 col-sm-6 col-xs-12">
+							</div><!--/.col-sm-3-->
+		</div><!--/.row-->
+	</div><!--/.container-->
+	<div class="bottom-footer">
+		<div class="container">
+			<p class="copyright">
+				<span>Theme: <a href="http://colorlib.com/wp/themes/illdy" title="Illdy" target="_blank">Illdy</a>.</span>
+				<span class="bottom-copyright" data-customizer="copyright-credit"></span>
+			</p>
+		</div>
+	</div>
+</footer><!--/#footer-->
+<script type='text/javascript' src='wp-includes/js/jquery/ui/core.min.js%3Fver=1.11.4'></script>
+<script type='text/javascript' src='wp-includes/js/jquery/ui/widget.min.js%3Fver=1.11.4'></script>
+<script type='text/javascript' src='wp-includes/js/jquery/ui/progressbar.min.js%3Fver=1.11.4'></script>
+<script type='text/javascript' src='wp-content/themes/illdy/layout/js/bootstrap/bootstrap.min.js%3Fver=3.3.6'></script>
+<script type='text/javascript' src='wp-content/themes/illdy/layout/js/owl-carousel/owl-carousel.min.js%3Fver=2.0.0'></script>
+<script type='text/javascript' src='wp-content/themes/illdy/layout/js/count-to/count-to.min.js%3Fver=5.2.2'></script>
+<script type='text/javascript' src='wp-content/themes/illdy/layout/js/visible/visible.min.js%3Fver=5.2.2'></script>
+<script type='text/javascript' src='wp-content/themes/illdy/layout/js/parallax.min.js%3Fver=1.0.16'></script>
+<script type='text/javascript' src='wp-content/themes/illdy/layout/js/plugins.min.js%3Fver=1.0.16'></script>
+<script type='text/javascript' src='wp-content/themes/illdy/layout/js/scripts.min.js%3Fver=1.0.16'></script>
+<script type='text/javascript' src='wp-includes/js/wp-embed.min.js%3Fver=5.2.2'></script>
+</body>
+</html>
